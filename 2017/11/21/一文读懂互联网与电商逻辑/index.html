@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="闲来无事，在网上翻阅过去的购物订单，淘宝，京东，新蛋各翻了一遍，满满都是青春的影子，不仅是商品淘汰速度，电商行业本身及周边产业发展之迅速，感叹世界变化之快…   在开始之前我们先明确一下概念及角色：   电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一文读懂互联网与电商逻辑">
+<meta property="og:url" content="https://serenata0719.github.io/2017/11/21/一文读懂互联网与电商逻辑/index.html">
+<meta property="og:site_name" content="SerenaTa">
+<meta property="og:description" content="闲来无事，在网上翻阅过去的购物订单，淘宝，京东，新蛋各翻了一遍，满满都是青春的影子，不仅是商品淘汰速度，电商行业本身及周边产业发展之迅速，感叹世界变化之快…   在开始之前我们先明确一下概念及角色：   电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2015-01-01T00:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一文读懂互联网与电商逻辑">
+<meta name="twitter:description" content="闲来无事，在网上翻阅过去的购物订单，淘宝，京东，新蛋各翻了一遍，满满都是青春的影子，不仅是商品淘汰速度，电商行业本身及周边产业发展之迅速，感叹世界变化之快…   在开始之前我们先明确一下概念及角色：   电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://serenata0719.github.io/2017/11/21/一文读懂互联网与电商逻辑/"/>
+
+
+
+
+
+  <title>一文读懂互联网与电商逻辑 | SerenaTa</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SerenaTa</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-comments">
+          <a href="/comments/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://serenata0719.github.io/2017/11/21/一文读懂互联网与电商逻辑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浮夸">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SerenaTa">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">一文读懂互联网与电商逻辑</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T11:40:55+00:00">
+                2017-11-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2015-01-01T00:00:00+00:00">
+                2015-01-01
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品设计/" itemprop="url" rel="index">
+                    <span itemprop="name">产品设计</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品设计/经验分享/" itemprop="url" rel="index">
+                    <span itemprop="name">经验分享</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>闲来无事，在网上翻阅过去的购物订单，淘宝，京东，新蛋各翻了一遍，满满都是青春的影子，不仅是商品淘汰速度，电商行业本身及周边产业发展之迅速，感叹世界变化之快…  </p>
+<p>在开始之前我们先明确一下概念及角色：  </p>
+<h1 id="电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必然是效率。"><a href="#电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必然是效率。" class="headerlink" title="电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必然是效率。"></a>电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必然是效率。</h1><p>再说一下角色，其中有两个角色，商品和消费者，连接两者之间的是互联网，互联网的优势就是效率，这是由其本质和特点决定的：  </p>
+<ul>
+<li><p>拥有无可比拟的速度，可以瞬间解决信息对称问题，电商加速了供需匹配  </p>
+</li>
+<li><p>理论上可以连接一切，可以服务全世界  </p>
+</li>
+<li><p>边际成本几乎为零，可复制  </p>
+</li>
+<li><p>滚雪球效应，越滚越大，一家独大，赢者通吃  </p>
+</li>
+<li><p>表现形式为上半场免费甚至亏损，下半场（未来）收费的模式。典型的放长线钓大鱼…  </p>
+</li>
+</ul>
+<p>商品销售正因抱上互联网这个大腿，从此蜗牛变窜天猴蹭蹭上天。不仅是电商行业，几乎所有的行业现在都在互联网化：传统行业+互联网=第二春产业。  </p>
+<h1 id="电商的逻辑，其实就是做一个叫提高效率事情：提高商品和消费者直接的见面（连接）的效率-速度、频率、接触范围和时长从而促成交易。根据不同的阶段大体可以分为三个环节。"><a href="#电商的逻辑，其实就是做一个叫提高效率事情：提高商品和消费者直接的见面（连接）的效率-速度、频率、接触范围和时长从而促成交易。根据不同的阶段大体可以分为三个环节。" class="headerlink" title="电商的逻辑，其实就是做一个叫提高效率事情：提高商品和消费者直接的见面（连接）的效率-速度、频率、接触范围和时长从而促成交易。根据不同的阶段大体可以分为三个环节。"></a>电商的逻辑，其实就是做一个叫提高效率事情：提高商品和消费者直接的见面（连接）的效率-速度、频率、接触范围和时长从而促成交易。根据不同的阶段大体可以分为三个环节。</h1><h2 id="第一阶段：交易流程基础环节的构建。"><a href="#第一阶段：交易流程基础环节的构建。" class="headerlink" title="第一阶段：交易流程基础环节的构建。"></a>第一阶段：交易流程基础环节的构建。</h2><p>做好商品数字化。这个很好理解，上架—就是实物商品信息转换成可读的信息，大多由视频、照片文字信息说明–找平面模特，用专业摄影棚，就是为了拍出最好的照片，文案字斟句酌，就为一完美的定妆照。每一款新iphone上市，都有一精美的详情介绍页面…如果这一步做不好，就目前的平均水准都没有达到，实在是已输在了起跑线上。  </p>
+<p>线上购买的流程的完善。国内最早做电子商务的8848曾说中国不具备电子商务的条件，没有支付系统，没有信用系统，但是后来马云巴巴做了什么大家都知道了。线上购买最基本关键节点（核心需求点）的包括 ：  </p>
+<ul>
+<li><p>购买环节：直接购买或购物车 。  </p>
+</li>
+<li><p>支付环节：第三方支付甚至第四方支付。  </p>
+</li>
+<li><p>配送环节：物流配送，京东成立了自己的快递及配送点，这就是核心竞争力。  </p>
+</li>
+<li><p>售后环节：在法律允许的范围内根据每个公司的业务提供不同的售后服务。  </p>
+</li>
+</ul>
+<p>简单的说，买卖交易在线上需要走的通，这是最基本的。  </p>
+<h2 id="第二阶段：做好关键时刻，速度，频率、接触范围和时长，强化连接体验。"><a href="#第二阶段：做好关键时刻，速度，频率、接触范围和时长，强化连接体验。" class="headerlink" title="第二阶段：做好关键时刻，速度，频率、接触范围和时长，强化连接体验。"></a>第二阶段：做好关键时刻，速度，频率、接触范围和时长，强化连接体验。</h2><p>关键时刻，就是用户和产品（平台）之间发生交互的关键瞬间，所有的运营行为和策略都将围绕这些关键时刻进行，尽可能从连接速度、频率、接触范围、时长和消费者产生联系，并由此记录用户的行为，作为以后决策的依据。这些关键时刻包括但不限于：    </p>
+<ul>
+<li><p>尽可能使得适合的商品最大程度的遇见消费者。大量的商品上架之后需要根据利润的大小、畅销程度、时宜、社会热度、用户喜好等将合适的商品呈现在适宜的位置，这就是做推荐，限时，做回馈，新品上架、做内容，去营造场景，创造社会思潮创造新购买需求，尽可能大面积的将商品显现给你。不管直接粗暴、温柔隐性，做的是对消费者施加影响加速其买！买！买！  </p>
+</li>
+<li><p>消息推送：当用户不够活跃时推送一条消息，通常系统消息需要取得允许，如果不允许，建议短信推送，总之你不能忘了我。  </p>
+</li>
+<li><p>多平台多渠道连接，网站，移动端，微信端，小程序，多多益善，总之扩大接触范围！  </p>
+</li>
+<li><p>强化连接体验不仅仅局限于线上浏览、购物，更要做好回归现实感的线下–与消费者面对面的直接体验：把商品包装的高大上，让他备有面子；培训一只有礼貌优秀的配送团队；顺便把楼上垃圾带下去（曾接到京东帮我带垃圾的短信，心里老感动了，可小哥从未上来过…果然是囧东啊）  </p>
+</li>
+</ul>
+<h2 id="第三阶段：基于物联网、大数据智能跟踪与推荐。"><a href="#第三阶段：基于物联网、大数据智能跟踪与推荐。" class="headerlink" title="第三阶段：基于物联网、大数据智能跟踪与推荐。"></a>第三阶段：基于物联网、大数据智能跟踪与推荐。</h2><p>智能时代用户行为是可追踪、量化、计算和预测的，这为精确推送提供了可靠依据。“猜你喜欢”、“购买此商品的用户还购买了”是通过用户行为跟踪，得出模糊推荐，而通过物联网技术或计算，比如在红酒瓶通过添加度量传感器追踪，空气净化器对过滤剩余寿命追踪，得出的数据比消费者自己还清楚，从而可以及时又准确进行一个萝卜一个坑定位推荐，著名广告大师约翰•沃纳梅克的难题解决了。 (翰•沃纳梅克,1838－1922——始创第一家百货商店“沃纳梅克氏”，被认为是百货商店之父；同时也是第一个投放现代广告的商人。他提出：我知道我的广告费有一半浪费了，但遗憾的是，我不知道是哪一半被浪费了)。 未来物联网、大数据、区块链技术可以追踪每一个行为活动，想想都害怕，这是要到三体人的时代了嘛？扯多了，如此看来，未来看好大数据、物联网产业，谁拥有了用户的跟踪数据，谁就拥有了未来。  </p>
+<p>智能推荐遵循“人以群分，物以类聚，投其所好”的原则，可以实现灵活多变甚至暴露奸商真面目的运营。最终可以做到：针对不同的人群、不同的时间、不同的地点（终端）、推送不同的商品或商品组合给予不同的定价策略（延伸阅读：618了，这篇推送也许可以为你省一大笔钱）。这分明就是在诠释防不胜防，无商不奸的行为，这个世界上最狡猾的大概就是掌控了机器智能的商家了吧？  </p>
+<p>这三个环节都不是孤立的，而是建造成金字塔式递进，需要持续不断的完善一二环节才有三环节，没有地基就不肯能往上建设。 </p>
+<p>[人人都是产品经理]（<a href="http://www.pmcaff.com/article/index/1026034777946240?from=label&amp;pmc_param%5Blabel_name%5D=）" target="_blank" rel="noopener">http://www.pmcaff.com/article/index/1026034777946240?from=label&amp;pmc_param%5Blabel_name%5D=）</a>   </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创经验分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="浮夸 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/21/你距离一个伟大的产品经理有多远 - 副本 - 副本/" rel="next" title="你距离一个伟大的产品经理有多远？">
+                <i class="fa fa-chevron-left"></i> 你距离一个伟大的产品经理有多远？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/21/git基本命令/" rel="prev" title="Git基本命令">
+                Git基本命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTkyNC84NDg4"></div>
+    </div>
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="浮夸" />
+            
+              <p class="site-author-name" itemprop="name">浮夸</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/serenata0719" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:592627609@qq.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必然是效率。"><span class="nav-number">1.</span> <span class="nav-text">电商，我们就做狭义的和通俗化的理解：通过互联网销售商品。从本质上讲，它是一种价值的传递行为，而非直接创造价值的行为，因为不直接生产商品，而是介于生产与消费之间的传递行为。那么，影响传递的主要因素必然是效率。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电商的逻辑，其实就是做一个叫提高效率事情：提高商品和消费者直接的见面（连接）的效率-速度、频率、接触范围和时长从而促成交易。根据不同的阶段大体可以分为三个环节。"><span class="nav-number">2.</span> <span class="nav-text">电商的逻辑，其实就是做一个叫提高效率事情：提高商品和消费者直接的见面（连接）的效率-速度、频率、接触范围和时长从而促成交易。根据不同的阶段大体可以分为三个环节。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一阶段：交易流程基础环节的构建。"><span class="nav-number">2.1.</span> <span class="nav-text">第一阶段：交易流程基础环节的构建。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二阶段：做好关键时刻，速度，频率、接触范围和时长，强化连接体验。"><span class="nav-number">2.2.</span> <span class="nav-text">第二阶段：做好关键时刻，速度，频率、接触范围和时长，强化连接体验。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三阶段：基于物联网、大数据智能跟踪与推荐。"><span class="nav-number">2.3.</span> <span class="nav-text">第三阶段：基于物联网、大数据智能跟踪与推荐。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">浮夸</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
